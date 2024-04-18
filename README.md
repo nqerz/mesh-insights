@@ -19,9 +19,15 @@ Service mesh technologies like Istio have revolutionized the way modern applicat
 
 To get started with Mesh Insights, follow these simple installation instructions:
 
-1. Clone this repository to your local machine.
-2. Navigate to the project directory.
-3. Follow the installation steps outlined in the `INSTALLATION.md` file.
+1. Clone the repository to create local Kubernetes cluster:
+
+   ```shell
+   git clone https://github.com/nqerz-CloudOps/local-kube-launch.git
+   ```
+
+2. Clone this repository to your local machine.
+3. Navigate to the project directory.
+4. Follow the installation steps outlined in the `INSTALLATION.md` file.
 
 ## Operation
 

@@ -1,0 +1,35 @@
+defaults:
+  service:
+    # The range of valid ports is 30000-32767
+    type: NodePort
+    ports:
+      - name: status-port
+        nodePort: 31021
+        port: 15021
+        protocol: TCP
+        targetPort: 15021
+      - name: http2
+        nodePort: 30080
+        port: 80
+        protocol: TCP
+        targetPort: 80
+      - name: https
+        nodePort: 30443
+        port: 443
+        protocol: TCP
+        targetPort: 443
+      - name: tls
+        nodePort: 31443
+        port: 15443
+        protocol: TCP
+        targetPort: 15443
+      - name: tls-istiod
+        nodePort: 31012
+        port: 15012
+        protocol: TCP
+        targetPort: 15012
+      - name: tls-webhook
+        nodePort: 31017
+        port: 15017
+        protocol: TCP
+        targetPort: 15017

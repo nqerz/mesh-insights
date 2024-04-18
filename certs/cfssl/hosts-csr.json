@@ -1,0 +1,19 @@
+{
+  "CN": "*.127.0.0.1.nip.io",
+  "hosts": [
+    "*.127.0.0.1.nip.io", 
+    "localhost", 
+    "127.0.0.1"
+  ],
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "CN",
+      "L": "Shanghai",
+      "ST": "Shanghai"
+    }
+  ]
+}

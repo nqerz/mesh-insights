@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+secretGenerator:
+  - name: ingress-tls-ca
+    type: kubernetes.io/tls
+    files:
+      - tls.key=*.127.0.0.1.nip.io.key
+      - tls.crt=*.127.0.0.1.nip.io.crt
+    namespace: istio-system
+
+generatorOptions:
+  disableNameSuffixHash: true

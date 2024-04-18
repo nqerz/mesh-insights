@@ -3,8 +3,10 @@ kind: Kustomization
 
 helmCharts:
   - name: gateway
-    releaseName: istio-ingress
+    # The value of releaseName in the Helm chart affects the configuration of the selector in the later Istio Gateway.
+    releaseName: istio-ingressgateway
     version: 1.21.1
     repo: https://istio-release.storage.googleapis.com/charts
     namespace: istio-system
     includeCRDs: true
+    valuesFile: value.yaml
