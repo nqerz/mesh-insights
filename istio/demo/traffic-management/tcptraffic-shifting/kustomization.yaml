@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: istio-io-tcp-traffic-shifting
+
+resources:
+  - namespace.yaml
+  - sleep.yaml
+  - tcp-echo-services.yaml
+  - tcp-echo-all-v1.yaml

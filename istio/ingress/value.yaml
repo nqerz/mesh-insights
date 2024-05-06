@@ -33,3 +33,8 @@ defaults:
         port: 15017
         protocol: TCP
         targetPort: 15017
+      - name: tcp
+        nodePort: 31400
+        port: 31400
+        protocol: TCP
+        targetPort: 31400

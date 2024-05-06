@@ -1,0 +1,27 @@
+# https://raw.githubusercontent.com/istio/istio/master/samples/tcp-echo/tcp-echo-20-v2.yaml
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: tcp-echo
+spec:
+  hosts:
+    - "*"
+  gateways:
+    - tcp-echo-gateway
+  tcp:
+    - match:
+        - port: 31400
+      route:
+        - destination:
+            host: tcp-echo
+            port:
+              number: 9000
+            subset: v1
+          weight: 80
+        - destination:
+            host: tcp-echo
+            port:
+              number: 9000
+            subset: v2
+          weight: 20

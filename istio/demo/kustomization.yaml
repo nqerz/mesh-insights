@@ -7,3 +7,5 @@ resources:
   - namespace.yaml
   - bookinfo.yaml
   - bookinfo-gateway.yaml
+  - bookinfo-destinationrule.yaml
+  - virtual-service-all-v1.yaml

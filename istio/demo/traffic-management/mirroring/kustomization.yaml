@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: istio-demo
+
+resources:
+  - deployment-httpbin-v1.yaml
+  - deployment-httpbin-v2.yaml
+  - service.yaml
+  - deployment-sleep2provideload.yaml
+  # Step 1 to apply routing to v1 only
+  - virtual-service-only-v1-routing.yaml
+  # Step 2 to apply a mirror virtualservice confit to v2
+  # - virtual-service-mirror-v1tov2-routing.yaml
